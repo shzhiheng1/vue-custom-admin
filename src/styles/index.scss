@@ -1,0 +1,40 @@
+@import "./constant.scss";
+@import "./variables.css";
+/* 全局样式 */
+* {
+  padding: 0px;
+  margin: 0px;
+}
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  height: 100%;
+  overflow: auto;
+  position: relative;
+}
+
+/* 浏览器为浅色主题时 */
+// @media (prefers-color-scheme: light) {
+//   :root {
+//     color: var(--color-text-default);
+//     background-color: var(--white-color-background);
+//   }
+// }
+// /* 浏览器为暗色主题 */
+// @media (prefers-color-scheme: dark) {
+//   :root {
+//     color: var(--white-color-text);
+//     background-color: var(--color-background);
+//   }
+// }
+/*不知道用户浏览器使用什么主题时应用的代码*/
+/* 
+@media (prefers-color-scheme: no-preference) {
+} */

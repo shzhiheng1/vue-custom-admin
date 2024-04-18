@@ -1,0 +1,8 @@
+/**
+用于变量导出，大部分用于vue文件中js中中使用
+**/
+@import "./constant.scss";
+
+:export {
+  fontOblique: $font-oblique;
+}

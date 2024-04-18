@@ -1,0 +1,24 @@
+/* root跟元素属性，定义变量全局可以用 */
+:root {
+  font-family: Inter, system-ui, Avenir, "Helvetica Neue", Helvetica,
+    "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial,
+    sans-serif;
+  color-scheme: light dark;
+  /* color: rgba(255, 255, 255, 0.87);
+    background-color: #242424; */
+  font-weight: 400;
+  font-size: 16px;
+  --color-background: #1b1b1b;
+  --white-color-background: #fafafa;
+  --color-text-default: #0b1016;
+  --white-color-text: #fff;
+  --color-border: #cacfd5;
+  --color-base: #f4f5f6;
+  --color-accent: #ba0d37;
+  /* 侧边栏 aside */
+  --sidebar-menu-bg-color: #001428;
+  --sidebar-menu-text-color: #c0c4cc;
+  --sidebar-menu-active-text-color: #fff;
+  /* 覆盖原样式 */
+  --el-menu-hover-bg-color: #409eff;
+}
