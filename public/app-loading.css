@@ -1,0 +1,38 @@
+#app-loading {
+  position: relative;
+  top: 45vh;
+  margin: 0 auto;
+  width: 28px;
+  height: 28px;
+  border-radius: 50% 50%;
+  animation: 2s ease-in-out infinite loading-animation;
+  font-size: 14px;
+}
+#app-loading::before,
+#app-loading::after {
+  position: absolute;
+  content: "";
+  width: 2em;
+  height: 2em;
+  border-radius: 50% 50%;
+  animation: 2s ease-in-out infinite loading-animation;
+}
+#app-loading::before {
+  left: -40px;
+  animation-delay: -0.2s;
+}
+#app-loading::after {
+  left: 40px;
+  animation-delay: 0.2s;
+}
+
+/* 通过阴影设置 */
+@keyframes loading-animation {
+  0%,
+  100% {
+    box-shadow: 0 2em 0 -2em;
+  }
+  50% {
+    box-shadow: 0 2em 0 0 #409eff;
+  }
+}

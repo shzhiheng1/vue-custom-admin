@@ -10,12 +10,8 @@
       <div class="breadcrumb">
         <el-breadcrumb>
           <el-breadcrumb-item v-for="(item, index) in breadcrumbs" :key="index">
-            <span v-if="index === breadcrumbs.length - 1">{{
-              item.meta.title
-            }}</span>
-            <a v-else @click.prevent="handleLink(item)">{{
-              item.meta.title
-            }}</a>
+            <span v-if="index === breadcrumbs.length - 1">{{ item.meta.title }}</span>
+            <a v-else @click.prevent="handleLink(item)">{{ item.meta.title }}</a>
           </el-breadcrumb-item>
           <!-- <el-breadcrumb-item> 是的 </el-breadcrumb-item> -->
         </el-breadcrumb>
@@ -23,17 +19,8 @@
     </div>
     <div class="navbar-right">
       <div class="navbar-right-item">
-        <el-tooltip
-          v-if="isFullFlag"
-          placement="bottom"
-          effect="dark"
-          content="退出全屏"
-        >
-          <SvgIcon
-            name="exitFullScreen"
-            @click="handleFullScreen"
-            class="svg_icon"
-          />
+        <el-tooltip v-if="isFullFlag" placement="bottom" effect="dark" content="退出全屏">
+          <SvgIcon name="exitFullScreen" @click="handleFullScreen" class="svg_icon" />
         </el-tooltip>
         <el-tooltip v-else placement="bottom" effect="dark" content="全屏">
           <el-icon size="20px" @click="handleFullScreen">
@@ -98,9 +85,7 @@
             <el-dropdown-menu>
               <el-dropdown-item> Action 1 </el-dropdown-item>
               <el-dropdown-item divided> Action 2 </el-dropdown-item>
-              <el-dropdown-item :divided="true" @click="handleLogout">
-                退出登录
-              </el-dropdown-item>
+              <el-dropdown-item :divided="true" @click="handleLogout"> 退出登录 </el-dropdown-item>
             </el-dropdown-menu>
           </template>
         </el-dropdown>
