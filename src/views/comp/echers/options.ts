@@ -8,7 +8,7 @@ export const barOptions: EChartsOption = {
   // }, //标题
   tooltip: {
     trigger: "axis",
-    axisPointer: { type: "cross" }, //坐标点
+    axisPointer: { type: "cross" } //坐标点
   }, //鼠标hover的效果
   // tooltip: {
   //   trigger: "axis",
@@ -20,30 +20,22 @@ export const barOptions: EChartsOption = {
   //   },
   // }, //鼠标hover的效果
   grid: {
-    left: 50,
+    left: 50
   }, //网格所在的位置
   legend: {
-    data: ["输入量", "其他量", "输出量"],
+    data: ["输入量", "其他量", "输出量"]
   }, //标志
   xAxis: {
     type: "category",
     name: "日期",
-    data: [
-      "星期一",
-      "星期二",
-      "星期三",
-      "星期四",
-      "星期五",
-      "星期六",
-      "星期日",
-    ],
+    data: ["星期一", "星期二", "星期三", "星期四", "星期五", "星期六", "星期日"]
 
     //  formatter: '{value} 元',
   }, //x轴
   yAxis: {
     axisLabel: {
-      formatter: "{value}元",
-    },
+      formatter: "{value}元"
+    }
   }, //y轴
   series: [
     {
@@ -55,12 +47,12 @@ export const barOptions: EChartsOption = {
         // color:'red',//柱颜色
         color: new graphic.LinearGradient(0, 0, 0, 1, [
           { color: "#5171fd", offset: 0 },
-          { color: "#c97afd", offset: 1 },
+          { color: "#c97afd", offset: 1 }
         ]),
         borderRadius: 10, //圆角
         shadowBlur: 10, //阴影宽度
-        shadowColor: "rgba(120, 36, 50, 0.5)", //阴影颜色
-      },
+        shadowColor: "rgba(120, 36, 50, 0.5)" //阴影颜色
+      }
       // showBackground: true, //是否显示柱背景
       // backgroundStyle: {
       //   color: "rgba(180,180,180,0.1)",
@@ -75,12 +67,12 @@ export const barOptions: EChartsOption = {
         // color:'red',//柱颜色
         color: new graphic.LinearGradient(0, 0, 0, 1, [
           { color: "#ea677c", offset: 0 },
-          { color: "#ef9b5f", offset: 1 },
+          { color: "#ef9b5f", offset: 1 }
         ]),
         borderRadius: 10, //圆角
         shadowBlur: 10, //阴影宽度
-        shadowColor: "rgba(120, 36, 50, 0.5)", //阴影颜色
-      },
+        shadowColor: "rgba(120, 36, 50, 0.5)" //阴影颜色
+      }
       // showBackground: true, //是否显示柱背景(一直显示背景)
       // backgroundStyle: {
       //   color: "rgba(180,180,180,0.1)",
@@ -90,29 +82,29 @@ export const barOptions: EChartsOption = {
       type: "line",
       name: "输出量",
       data: [50, 150, 150, 100, 80, 200, 200],
-      smooth: true, //平滑曲线
-    },
-  ], //数据系列
+      smooth: true //平滑曲线
+    }
+  ] //数据系列
 };
 export const lineOptions: EChartsOption = {
   xAxis: {
     type: "category",
-    data: ["10-1", "10-2", "10-3", "10-4", "10-5", "10-6", "10-7", "10-8"],
+    data: ["10-1", "10-2", "10-3", "10-4", "10-5", "10-6", "10-7", "10-8"]
   },
   yAxis: {
-    type: "value",
+    type: "value"
   },
   legend: {
-    data: ["最高气温", "最低气温"],
+    data: ["最高气温", "最低气温"]
   },
   grid: {
-    left: 30,
+    left: 30
   }, //网格所在的位置
   tooltip: {
     trigger: "axis",
     axisPointer: {
-      type: "line",
-    },
+      type: "line"
+    }
     // backgroundColor: "#ff0000",
     // borderColor?: ColorString;
     // borderRadius?: number;
@@ -127,13 +119,13 @@ export const lineOptions: EChartsOption = {
         width: 3, //线条宽度
         color: "#F6D06F", //线条颜色
         shadowBlur: 10, //阴影模糊
-        shadowOffsetY: 6, //阴影垂直方向的偏移量
+        shadowOffsetY: 6 //阴影垂直方向的偏移量
       },
       itemStyle: {
-        color: "#F6D06F", //标记点的颜色
+        color: "#F6D06F" //标记点的颜色
       },
       symbol: "emptyCircle", //标记点形状
-      symbolSize: 6, //标记点大小
+      symbolSize: 6 //标记点大小
       // showSymbol: true,//显示标记点
     },
     {
@@ -148,31 +140,31 @@ export const lineOptions: EChartsOption = {
         color: "#5171fd", // 线条颜色
         shadowColor: "rgba(66,102,247, 0.55)",
         shadowBlur: 10,
-        shadowOffsetY: 6,
+        shadowOffsetY: 6
       },
       itemStyle: {
         color: "#5171fd",
         borderColor: "#5171fd",
-        borderWidth: 2,
+        borderWidth: 2
       },
       areaStyle: {
         color: new graphic.LinearGradient(0, 0, 0, 1, [
           {
             offset: 0,
-            color: "#5171fd",
+            color: "#5171fd"
           },
           {
             offset: 0.3,
-            color: "#5171fd",
+            color: "#5171fd"
           },
           {
             offset: 1,
-            color: "rgba(127,153,255,0.1)",
-          },
-        ]),
-      }, //背景色
-    },
-  ],
+            color: "rgba(127,153,255,0.1)"
+          }
+        ])
+      } //背景色
+    }
+  ]
 };
 export const pieOptions: EChartsOption = {
   title: [
@@ -180,11 +172,11 @@ export const pieOptions: EChartsOption = {
       text: "消费",
       textStyle: {
         color: "#5171fd",
-        fontSize: 25,
+        fontSize: 25
       },
       top: "center",
-      left: "center",
-    },
+      left: "center"
+    }
   ], //标题的位置
   legend: {
     show: true,
@@ -192,7 +184,7 @@ export const pieOptions: EChartsOption = {
     top: 0,
     type: "scroll",
     itemWidth: 18,
-    itemHeight: 11,
+    itemHeight: 11
   }, //设置浮标样式
   tooltip: {
     // formatter: "{b}:{c}, {d}% ",
@@ -207,45 +199,46 @@ export const pieOptions: EChartsOption = {
       itemStyle: {
         borderRadius: 4,
         borderColor: "#fff",
-        borderWidth: 1,
+        borderWidth: 1
       },
       emphasis: {
         label: {
           show: true,
           fontSize: 25,
-          fontWeight: "bold",
-        },
+          fontWeight: "bold"
+        }
       }, //高亮状态
       data: [
         {
           name: "炸鸡",
-          value: 18,
+          value: 18
         },
         {
           name: "火锅",
-          value: 35,
+          value: 35
         },
         {
           name: "烤肉",
-          value: 37,
+          value: 37
         },
         {
           name: "料理",
-          value: 20,
+          value: 20
         },
         {
           name: "热干面",
-          value: 36,
-        },
-      ],
+          value: 36
+        }
+      ]
       // label: {
       //   show: false,
       //   position: "center",
       // }, //名称的显示
-    },
-  ],
+    }
+  ]
 };
-export const waterOptions: EChartsOption = {
+// 因为EChartsOption的type类中中没有"liquidFill",所以去掉类型，否则编译失败！
+export const waterOptions = {
   series: [
     {
       // @ts-ignore
@@ -259,8 +252,8 @@ export const waterOptions: EChartsOption = {
         //     color: "red", //第二个波浪将为红色
         //   },
         // },
-        0.6, 0.6,
-      ],
-    },
-  ],
+        0.6, 0.6
+      ]
+    }
+  ]
 };

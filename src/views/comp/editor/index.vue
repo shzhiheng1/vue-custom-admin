@@ -32,10 +32,10 @@ import { IDomEditor, IEditorConfig } from "@wangeditor/editor";
 //
 const editorRef = shallowRef();
 const toolbarConfig = {
-  excludeKeys: ["uploadImage", "uploadVideo"], //insertImage插入图片，uploadImage是网络图片
+  excludeKeys: ["uploadImage", "uploadVideo"] //insertImage插入图片，uploadImage是网络图片
 };
 const mode = "default"; //default或simple
-const valueHtml = ref(null);
+const valueHtml = ref();
 
 // type MENU_CONF?: IMenuConfig
 
@@ -80,15 +80,15 @@ const editorConfig: Partial<IEditorConfig> = {
         // TS 语法
         // onError(file, err, res) {               // JS 语法
         console.log(`${file.name} 上传出错`, err, res);
-      },
+      }
     },
     uploadVideo: {
       customInsert(res: any, insertFn: InsertFnVideoType) {
         // 从 res 中找到 url poster ，然后插入视频
         insertFn(res.url, "");
-      },
-    },
-  },
+      }
+    }
+  }
 };
 // 创建时记录editor实例
 const handleCreated = (editor: IDomEditor) => {
@@ -110,8 +110,7 @@ const handleSave = () => {
   console.log("------onSave-------", valueHtml.value);
 };
 // 销毁
-onBeforeUnmount(() => {
-});
+onBeforeUnmount(() => {});
 </script>
 
 <style lang="scss" scoped>

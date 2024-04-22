@@ -7,7 +7,7 @@
             :effect="currentPath === tag.path ? 'dark' : 'plain'"
             :closable="!tag.meta?.affix"
             v-for="tag in tagList"
-            :key="tag.name"
+            :key="tag.fullPath"
             @close="handleClose(tag)"
           >
             <router-link :to="{ path: tag.path, query: tag.query }">
@@ -53,7 +53,7 @@ const filterAffix = (routes: RouteRecordRaw[]) => {
       tags.push({
         path: route.path,
         name: route.name,
-        meta: { ...route.meta },
+        meta: { ...route.meta }
       });
     }
     if (route.children && route.children.length > 0) {
@@ -89,7 +89,7 @@ watch(
   },
   {
     deep: true,
-    immediate: true,
+    immediate: true
   }
 );
 
