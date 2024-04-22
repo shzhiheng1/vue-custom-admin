@@ -86,14 +86,14 @@
         </el-tooltip>
       </div>
       <div class="navbar-right-item">
-        <el-dropdown>
-          <span class="avatar">
+        <el-dropdown trigger="hover">
+          <div class="avatar">
             <el-avatar
               size="small"
               src="https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1epng.png"
             />
             <span>admin</span>
-          </span>
+          </div>
           <template #dropdown>
             <el-dropdown-menu>
               <el-dropdown-item> Action 1 </el-dropdown-item>
@@ -220,10 +220,13 @@ const handleChangeTheme = () => {
       .avatar {
         display: flex;
         align-items: center;
-        border-style: none;
         .el-avatar {
           margin-right: 10px;
         }
+      }
+      // 解决el-dropdown黑框的bug
+      .avatar:focus-visible {
+        outline: unset;
       }
     }
   }

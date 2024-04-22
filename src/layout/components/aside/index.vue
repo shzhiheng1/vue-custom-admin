@@ -14,7 +14,7 @@
           router
         >
           <!-- 嵌套路由拼接产生菜单时使用 -->
-          <MenuItem
+          <menu-item
             v-for="route in menuMap"
             :key="route.path"
             :item="route"
@@ -125,6 +125,17 @@ const actionMenu = computed(() => {
         width: 2px;
         height: 100%;
         background-color: #fff;
+      }
+      // 折叠是隐藏文字和旋转箭头
+      :deep(span) {
+        height: 0;
+        width: 0;
+        overflow: hidden;
+        visibility: hidden;
+        display: inline-block;
+      }
+      :deep(i) {
+        display: none;
       }
     }
   }
