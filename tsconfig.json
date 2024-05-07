@@ -21,7 +21,7 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     /* 定义element-plus组件类型*/
-    "types": ["element-plus/global"],
+    "types": ["element-plus/global","pinia-plugin-persist"],
     // 为了使用别名
     "baseUrl": "./",
     "paths": {

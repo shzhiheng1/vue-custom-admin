@@ -5,7 +5,7 @@
         <el-space>
           <el-tag
             :effect="currentPath === tag.path ? 'dark' : 'plain'"
-            :closable="!tag.meta?.affix"
+            :closable="!tag.meta?.affix && tagList.length !== 1"
             v-for="tag in tagList"
             :key="tag.fullPath"
             @close="handleClose(tag)"
