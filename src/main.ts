@@ -35,3 +35,5 @@ app.use(router);
 app.use(ElementPlus, { locale: zhCn });
 app.use(store);
 app.mount("#app");
+//使用vue.js devtools工具
+app.config.performance = true;
